@@ -1,0 +1,8 @@
+--DROP TABLE IF EXISTS creditcards;
+--
+--CREATE TABLE creditcards (
+--  id INT AUTO_INCREMENT  PRIMARY KEY,
+--  name VARCHAR(250) NOT NULL,
+--  card_number VARCHAR(19) NOT NULL,
+--  limit INT NOT NULL
+--);
