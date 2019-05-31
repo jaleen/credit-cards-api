@@ -1,11 +1,10 @@
 package creditcards;
+
 import creditcards.model.CreditCard;
 import creditcards.service.CreditCardService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -13,16 +12,16 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-
 import static org.mockito.Mockito.when;
 
+@SpringBootTest
 @RunWith(SpringRunner.class)
 public class CreditCardTest {
 
 
     @MockBean
     private CreditCardRepo repo;
-    @Autowired
+    @Autowired (required = true)
     private CreditCardService service;
     @Test
     public void whenACardIsSaved_thenItIsCreatedSuccessfully(){
